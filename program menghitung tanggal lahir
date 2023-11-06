@@ -1,0 +1,16 @@
+import datetime as dt
+
+hari_ini = dt.date.today()
+ttl =dt.date(2005,5,28)
+
+print(f"Hari ini adalah hari= {hari_ini:%A}")
+print(f"Hari lahir adalah hari= {ttl:%A}")
+
+umur = hari_ini - ttl
+umur_tahun = umur.days // 365
+sisa_hari = umur.days % 365
+umur_bulan = sisa_hari // 30
+sisa_bulan = sisa_hari % 30
+umur_hari = sisa_bulan
+print(f"Jika kamu lahir pada tanggal: {ttl}") 
+print(f"Umur anda adalah: {umur_tahun} tahun {umur_bulan} bulan {umur_hari} hari")
